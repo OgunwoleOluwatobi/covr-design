@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carbon.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:carbon_cornerRadius="10dp"
+    android:elevation="5dp"
+    android:background="#6143BE"
+    android:paddingVertical="14dp"
+    app:carbon_elevationShadowColor="#1A000000"
+    android:gravity="center"
+    android:clipToPadding="false">
+
+    <TextView
+        android:id="@+id/filled_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Text"
+        android:textColor="@color/white"
+        android:textSize="15sp"/>
+
+</carbon.widget.LinearLayout>

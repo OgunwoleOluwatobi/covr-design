@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         drawerItems = findViewById(R.id.drawer_items);
         drawerItems.setLayoutManager(new LinearLayoutManager(this));
 
+        //Set List for drawer items and icons
         drawerTitle.clear();
         drawerTitle.add("Dashboard");
         drawerTitle.add("All Transactions");
@@ -59,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
         drawerItems.setAdapter(new DrawerAdapter(this, drawerTitle, drawerIcon));
 
+        //define recycler view type for dashboard options
         RecyclerView recyclerView = findViewById(R.id.dash_list);
         recyclerView.setLayoutManager(
                 new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
@@ -68,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
         closeDrawer.setOnClickListener(view -> closeDrawer(drawerLayout));
 
+        //create array for dashboard items
         List<DashItem> dashItems = new ArrayList<>();
         dashItems.add(new DashItem(
                 R.drawable.ic_dash_bg1,
