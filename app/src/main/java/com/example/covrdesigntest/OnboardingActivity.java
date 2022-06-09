@@ -37,6 +37,7 @@ public class OnboardingActivity extends AppCompatActivity {
     android.widget.LinearLayout buttonHolder;
 
     Animation animation;
+    Animation onboardingIndicatorAnimation;
 
     private OnboardingAdapter onboardingAdapter;
 
@@ -70,6 +71,7 @@ public class OnboardingActivity extends AppCompatActivity {
         login = findViewById(R.id.login);
 
         animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
+        onboardingIndicatorAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.onboarding_indicator_anim);
 
 
         onboardingAdapter = new OnboardingAdapter(this);
@@ -112,6 +114,8 @@ public class OnboardingActivity extends AppCompatActivity {
                 dot2.setElevation(0);
                 dot3.setElevation(0);
 
+                dot1.startAnimation(onboardingIndicatorAnimation);
+
                 dot1.getLayoutParams().width = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 76, getResources().getDisplayMetrics());
                 dot1.requestLayout();
                 dot2.getLayoutParams().width = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 9, getResources().getDisplayMetrics());
@@ -138,6 +142,8 @@ public class OnboardingActivity extends AppCompatActivity {
                 dot2.setElevation(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, getResources().getDisplayMetrics()));
                 dot1.setElevation(0);
                 dot3.setElevation(0);
+
+                dot2.startAnimation(onboardingIndicatorAnimation);
 
                 dot2.getLayoutParams().width = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 76, getResources().getDisplayMetrics());
                 dot2.requestLayout();
@@ -166,6 +172,8 @@ public class OnboardingActivity extends AppCompatActivity {
                 dot3.setElevation(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, getResources().getDisplayMetrics()));
                 dot1.setElevation(0);
                 dot2.setElevation(0);
+
+                dot3.startAnimation(onboardingIndicatorAnimation);
 
                 dot3.getLayoutParams().width = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 76, getResources().getDisplayMetrics());
                 dot3.requestLayout();
