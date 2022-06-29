@@ -80,8 +80,8 @@ public class OnboardingActivity extends AppCompatActivity {
         viewPager.addOnPageChangeListener(pageChangeListener);
 
         next.setOnClickListener(view -> viewPager.setCurrentItem(viewPager.getCurrentItem()+1, true));
-        signup.setOnClickListener(view -> startActivity(new Intent(this, MainActivity.class)));
-        login.setOnClickListener(view -> startActivity(new Intent(this, MainActivity.class)));
+        signup.setOnClickListener(view -> startActivity(new Intent(this, SignupActivity.class)));
+        login.setOnClickListener(view -> startActivity(new Intent(this, LoginActivity.class)));
 
     }
 

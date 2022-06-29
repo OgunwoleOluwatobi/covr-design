@@ -11,4 +11,8 @@
     <color name="onboardingIndicatorInactive">#E5E1FB</color>
     <color name="onboarding2">#33775C</color>
     <color name="onboarding3">#D26E3E</color>
+    <color name="dark33">#33383C</color>
+    <color name="dark2C">#2C2948</color>
+    <color name="text93">#938CA8</color>
+    <color name="text1E">#1E1147</color>
 </resources>

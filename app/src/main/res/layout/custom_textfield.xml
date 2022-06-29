@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/textfieldHolder">
+    <LinearLayout
+        android:id="@+id/labelHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="label"
+            android:textSize="12sp"
+            android:textColor="@color/dark2C"
+            android:lineHeight="12dp"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp" />
+    </LinearLayout>
+    <EditText
+        android:id="@+id/textfield"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="15sp"
+        android:background="@drawable/textfield_bg"
+        android:paddingHorizontal="30dp"
+        android:hint="hint"/>
+
+</LinearLayout>
