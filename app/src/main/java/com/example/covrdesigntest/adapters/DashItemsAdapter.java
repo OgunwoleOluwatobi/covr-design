@@ -1,5 +1,7 @@
 package com.example.covrdesigntest.adapters;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -15,6 +17,12 @@ import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.covrdesigntest.AccountOpeningActivity;
+import com.example.covrdesigntest.AllTransactionsActivity;
+import com.example.covrdesigntest.BillsPaymentActivity;
+import com.example.covrdesigntest.EarningsActivity;
+import com.example.covrdesigntest.FundsTransferActivity;
+import com.example.covrdesigntest.MainActivity;
 import com.example.covrdesigntest.R;
 import com.example.covrdesigntest.models.DashItem;
 
@@ -23,10 +31,12 @@ import java.util.List;
 public class DashItemsAdapter extends RecyclerView.Adapter<DashItemsAdapter.DashItemsViewHolder> {
     private List<DashItem> dashItems;
     private int smallHeight;
+    Activity activity;
 
-    public DashItemsAdapter(List<DashItem> dashItems, int smallHeight) {
+    public DashItemsAdapter(List<DashItem> dashItems, int smallHeight, Activity activity) {
         this.dashItems = dashItems;
         this.smallHeight = smallHeight;
+        this.activity = activity;
     }
 
     @NonNull
@@ -49,6 +59,33 @@ public class DashItemsAdapter extends RecyclerView.Adapter<DashItemsAdapter.Dash
         if(position == 1 || position == 3 || position == 4 || position == 5) {
             holder.rearrange();
         }
+        holder.background.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int position = holder.getAdapterPosition();
+
+                switch (position) {
+                    case 0:
+                        activity.startActivity(new Intent(activity, AccountOpeningActivity.class));
+                        break;
+                    case 1:
+                        activity.startActivity(new Intent(activity, AllTransactionsActivity.class));
+                        break;
+                    case 2:
+                        activity.startActivity(new Intent(activity, BillsPaymentActivity.class));
+                        break;
+                    case 3:
+                        activity.startActivity(new Intent(activity, FundsTransferActivity.class));
+                        break;
+                    case 4:
+                        activity.startActivity(new Intent(activity, MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+                        break;
+                    case 5:
+                        activity.startActivity(new Intent(activity, MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+                        break;
+                }
+            }
+        });
     }
 
     @Override

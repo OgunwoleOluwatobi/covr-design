@@ -2,6 +2,7 @@ package com.example.covrdesigntest.adapters;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.covrdesigntest.AllTransactionsActivity;
+import com.example.covrdesigntest.EarningsActivity;
+import com.example.covrdesigntest.MainActivity;
 import com.example.covrdesigntest.R;
 
 import java.util.ArrayList;
@@ -51,9 +55,32 @@ public class DrawerAdapter extends RecyclerView.Adapter<DrawerAdapter.viewHolder
             public void onClick(View view) {
                 int position = holder.getAdapterPosition();
 
-//                switch (position) {
-//                    case 0:
-//                }
+                switch (position) {
+                    case 0:
+                        activity.startActivity(new Intent(activity, MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK));
+                        activity.finish();
+                        break;
+                    case 1:
+                        activity.startActivity(new Intent(activity, AllTransactionsActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK));
+                        activity.finish();
+                        break;
+                    case 2:
+                        activity.startActivity(new Intent(activity, EarningsActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK));
+                        activity.finish();
+                        break;
+                    case 3:
+                        activity.startActivity(new Intent(activity, MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK));
+                        activity.finish();
+                        break;
+                    case 4:
+                        activity.startActivity(new Intent(activity, MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK));
+                        activity.finish();
+                        break;
+                    case 5:
+                        activity.startActivity(new Intent(activity, MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK));
+                        activity.finish();
+                        break;
+                }
             }
         });
     }

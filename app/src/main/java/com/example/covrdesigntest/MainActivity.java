@@ -114,14 +114,14 @@ public class MainActivity extends AppCompatActivity {
         );
         dashItems.add(new DashItem(
                 R.drawable.ic_dash_bg6,
-                R.drawable.dash_icon6,
-                "Cash\ndeposit",
-                (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 58, getResources().getDisplayMetrics()),
-                (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 58, getResources().getDisplayMetrics())
+                R.drawable.dash_icon7,
+                "Customer\nservice",
+                (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 46, getResources().getDisplayMetrics()),
+                (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 46, getResources().getDisplayMetrics())
             )
         );
 
-        recyclerView.setAdapter(new DashItemsAdapter(dashItems, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 116, getResources().getDisplayMetrics())));
+        recyclerView.setAdapter(new DashItemsAdapter(dashItems, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 116, getResources().getDisplayMetrics()), this));
     }
 
     @Override

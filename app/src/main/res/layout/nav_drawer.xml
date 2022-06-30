@@ -15,7 +15,7 @@
         android:layout_gravity="right"
         android:layout_marginTop="78dp"
         android:layout_marginEnd="44dp"
-        android:src="@drawable/ic_cancel"
+        android:src="@drawable/ic_cancel_white"
         android:background="?android:attr/selectableItemBackground"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
